@@ -1,52 +1,71 @@
 # **Bank Customer Churn – Data Acquisition, Wrangling & Analytical Structuring**  
 *A structured data‑engineering and analytics case study*
 
-## **Overview**
-This project demonstrates a full end‑to‑end data preparation workflow using a real‑world banking churn dataset. The work spans **data acquisition**, **web scraping**, **data quality assessment**, **consolidation**, **duplicate and missing‑value treatment**, **feature engineering**, and **segmentation‑based aggregation**.  
+---
 
-The project is implemented in Python using Jupyter Notebook and reflects industry‑aligned data‑wrangling practices relevant to customer analytics, churn modelling, and financial services insights.
+## **Overview**
+This project presents an end‑to‑end data preparation workflow using **three complementary datasets** related to banking and customer churn. The work spans:
+
+- Structured data acquisition  
+- Web scraping  
+- Data integrity evaluation  
+- Dataset consolidation  
+- Duplicate and missing‑value treatment  
+- Feature engineering (age & value segmentation)  
+- Grouped aggregation and pivot‑based structuring  
+
+The project is implemented in Python using Jupyter Notebook and reflects industry‑aligned practices relevant to customer analytics, churn modelling, and financial services.
 
 ---
 
-## **Objectives**
-- Acquire and inspect structured and semi‑structured data programmatically.  
-- Evaluate dataset structure, schema alignment, and data integrity.  
-- Consolidate multiple datasets into a unified analytical base table.  
-- Identify and resolve duplicates and missing values using justified strategies.  
-- Engineer new features, including age‑based and value‑based customer segments.  
-- Produce grouped aggregations and pivot‑based summaries to support downstream modelling and visualisation.
+## 📂 **Project Structure**
+```plaintext
+📁 bank-churn-case-study
+│
+├── Bank_Churn_Set_1_Data_Acquisition.ipynb
+├── Bank_Churn_2_Data_Wrangling_and_Structuring.ipynb
+|
+└── README.md
+```
 
 ---
 
 ## **Data Sources**
-### **1. Bank Churn Dataset (Primary Dataset)**
+
+### **1. Bank Churn Dataset**
 Loaded directly from a public GitHub repository.  
-Includes customer demographics, account activity, and financial indicators used to analyse churn behaviour.
+Contains customer demographics, account activity, and financial indicators used to analyse churn behaviour.
 
 ### **2. Web‑Scraped Banking Table**
 Extracted from Wikipedia using `requests` and `BeautifulSoup`.  
-Demonstrates semi‑structured data acquisition and transformation into a Pandas DataFrame.
+Demonstrates the acquisition and transformation of semi‑structured web data into a usable DataFrame.
+
+### **3. Additional CSV Dataset **
+A second structured dataset provided for part 2.  
+Used to evaluate schema alignment, consolidate records, and assess data integrity across multiple sources.
 
 ---
 
 ## **Key Components**
 
 ### **Part 1 — Data Acquisition & Initial Inspection**
-- Loaded structured CSV data using `pandas.read_csv()`.  
+- Loaded the primary Bank Churn dataset using `pandas.read_csv()`.  
 - Displayed head, schema, and column names.  
 - Scraped a banking‑related table from Wikipedia and converted it into a DataFrame.  
-- Compared structure and degree of organisation across both sources.
+- Compared structure and degree of organisation across the two sources.
 
 ---
 
 ### **Part 2 — Data Wrangling & Structural Refinement**
+
 #### **1. Structural Evaluation**
-- Assessed dataset formats (wide vs. long).  
-- Verified schema alignment between datasets.  
+- Assessed the structure of all three datasets.  
+- Identified wide vs. long formats.  
+- Verified schema alignment between the two CSV datasets.  
 - Discussed implications for merging and downstream analysis.
 
 #### **2. Consolidation**
-- Combined datasets using a justified merge/concatenation strategy.  
+- Combined the two structured CSV datasets into a unified analytical base table.  
 - Reported row counts before and after consolidation.  
 - Identified potential data integrity risks introduced during merging.
 
@@ -64,39 +83,43 @@ Demonstrates semi‑structured data acquisition and transformation into a Pandas
 #### **5. Data Type & Structural Refinement**
 - Ensured correct data types for all variables.  
 - Converted categorical fields where appropriate.  
-- Removed irrelevant or redundant variables with justification.
+- Removed irrelevant or redundant variables.
 
 ---
 
 ### **Part 3 — Segmentation, Aggregation & Pivoting**
+
 #### **1. Age‑Based Segmentation**
-- Created interpretable age bands using custom binning logic.
+Created interpretable age bands using custom binning logic.
 
 #### **2. Value‑Based Segmentation**
-- Segmented customers by financial value using balance or estimated salary.
+Segmented customers by financial value using balance or estimated salary.
 
 #### **3. Grouped Aggregation**
-- Produced multi‑level grouped summaries (e.g., churn rate by geography and gender).  
-- Included segmentation‑based aggregations (e.g., average balance by age group).
+Performed multi‑level grouped summaries, including:
+
+- Average balance by age group  
+- Mean credit score by churn status  
+- Churn rate by geography and gender  
 
 #### **4. Pivot Table Construction**
-- Built a pivot table to analyse churn behaviour across categorical dimensions.  
-- Interpreted results in a business‑relevant context.
+Built a pivot table to analyse churn behaviour across categorical dimensions and interpreted results in context.
 
 ---
 
-## **Tools & Technologies**
-- **Python**  
-- **Pandas**  
-- **NumPy**  
-- **BeautifulSoup (bs4)**  
-- **Requests**  
-- **Jupyter Notebook**
+## 🛠️ **Technologies Used**
+- Python  
+- Pandas  
+- NumPy  
+- BeautifulSoup (bs4)  
+- Requests  
+- Jupyter Notebook  
 
 ---
 
 ## **Skills Demonstrated**
-- Data acquisition (structured + web‑scraped)  
+- Structured + semi‑structured data acquisition  
+- Web scraping  
 - Data wrangling and cleaning  
 - Duplicate and missing‑value strategy design  
 - Feature engineering  
@@ -106,22 +129,10 @@ Demonstrates semi‑structured data acquisition and transformation into a Pandas
 
 ---
 
-## **Project Structure**
-```
-📁 bank-churn-case-study
-│
-├── SS1_Data_Acquisition.ipynb
-├── SS2_Data_Wrangling_and_Structuring.ipynb
-├── reflection.pdf
-└── README.md
-```
-
----
-
 ## **Potential Extensions**
-This project sets the foundation for:  
-- Predictive churn modelling (logistic regression, tree‑based models)  
+- Predictive churn modelling  
 - Customer lifetime value estimation  
-- Visual analytics dashboards (Power BI, Tableau, or Python visualisation)  
+- Visual analytics dashboards  
 - Bias and fairness evaluation in financial analytics  
 
+---
