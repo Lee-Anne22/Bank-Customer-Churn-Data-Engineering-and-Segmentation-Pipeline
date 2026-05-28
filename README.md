@@ -40,7 +40,7 @@ Contains customer demographics, account activity, and financial indicators used 
 Extracted from Wikipedia using `requests` and `BeautifulSoup`.  
 Demonstrates the acquisition and transformation of semi‑structured web data into a usable DataFrame.
 
-### **3. Additional CSV Dataset **
+### **3. Additional CSV Dataset**
 A second structured dataset provided for part 2.  
 Used to evaluate schema alignment, consolidate records, and assess data integrity across multiple sources.
 
@@ -107,7 +107,7 @@ Built a pivot table to analyse churn behaviour across categorical dimensions and
 
 ---
 
-## 🛠️ **Technologies Used**
+## **Technologies Used**
 - Python  
 - Pandas  
 - NumPy  
