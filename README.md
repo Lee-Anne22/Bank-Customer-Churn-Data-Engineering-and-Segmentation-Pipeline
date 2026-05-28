@@ -22,8 +22,8 @@ The project is implemented in Python using Jupyter Notebook and reflects industr
 ```plaintext
 📁 bank-churn-case-study
 │
-├── Bank_Churn_Set_1_Data_Acquisition.ipynb
-├── Bank_Churn_2_Data_Wrangling_and_Structuring.ipynb
+├── Bank_Churn_Set_1.ipynb
+├── Bank_Churn_2.ipynb
 |
 └── README.md
 ```
